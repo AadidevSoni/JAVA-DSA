@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class BinaryStrings {
+public class BinaryStrings { //Rev - 1
 
 	public static void main(String[] args) {
 		// Given an integer n, return all binary strings of length n that do not contain consecutive 1s. Return the result in lexicographically increasing order.

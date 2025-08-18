@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheckSubsequenceSum {
+public class CheckSubsequenceSum { // rev - 1
 
 	public static void main(String[] args) {
 		int[] n = new int[] {1,2,3,4,5};
