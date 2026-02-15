@@ -39,7 +39,7 @@ class Solution {
         int[] res = new int[n];
         Map<Integer, Integer> map = new HashMap<>();
         for(int i=n-1;i>=0;i--) {
-            while(!st.isEmpty() && st.peek() <= nums2[i]) {
+            while(!st.isEmpty() && st.peek() <= nums2[i]) { 
                 st.pop();
             }
 
