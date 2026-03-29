@@ -1,3 +1,22 @@
+class Solution {
+    public int jump(int[] nums) {
+        int ans = minJumps(0,0,nums);
+        return ans;
+    }
+
+    public int minJumps(int ind, int jumps, int[] nums) {
+        if(ind >= nums.length - 1) {
+            return jumps;
+        }
+        int min = Integer.MAX_VALUE;
+        for(int j=1;j<=nums[ind];j++) {
+            min = Math.min(min, minJumps(ind+j,jumps+1,nums));
+        }
+        return min;
+    }
+}
+
+
 //Brute Force
 class Solution {
     public int jump(int[] nums) {
