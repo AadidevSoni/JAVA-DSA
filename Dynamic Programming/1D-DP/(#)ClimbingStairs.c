@@ -33,3 +33,41 @@ public class ClimbingStairs {
 	}
 
 }
+
+//Recursion 
+
+class Solution {
+    public int climbStairs(int n) {
+        int res = f(n);
+        return res;
+    }
+
+    public int f(int ind) {
+        if(ind == 0) {
+            return 1;
+        }
+        if(ind == 1) {
+            return 1;
+        }
+        int left = f(ind-1);
+        int right = f(ind-2);
+        return left+right;
+    }
+}
+
+//DP 
+
+class Solution {
+    public int climbStairs(int n) {
+        int dp[] = new int[n+1];
+
+        dp[0] = 1;
+        dp[1] = 1;
+
+        for(int i=2;i<=n;i++) {
+            dp[i] = dp[i-1] + dp[i-2];
+        }
+
+        return dp[n];
+    }
+}

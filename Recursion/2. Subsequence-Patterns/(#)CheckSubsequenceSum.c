@@ -14,6 +14,7 @@ public class CheckSubsequenceSum { // rev - 1
     public static void checkSubsequence(int ind, int n, int target, int[] nums, List<List<Integer>> ans, List<Integer> ds) {
         if(target == 0) {
             ans.add(new ArrayList<>(ds));
+            return;
         }
         if(ind == n) return;
 
