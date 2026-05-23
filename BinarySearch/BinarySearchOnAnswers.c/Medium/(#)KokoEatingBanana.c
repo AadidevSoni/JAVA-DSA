@@ -57,3 +57,41 @@ class Solution {
         return ans;
     }
 }
+
+//Easy to read 
+class Solution {
+    public int minEatingSpeed(int[] piles, int h) {
+        int n = piles.length;
+        int max = Integer.MIN_VALUE;
+        for(int i=0;i<n;i++) {
+            if(piles[i] > max) {
+                max = piles[i];
+            }
+        }
+        int low = 1;
+        int high = max;
+        int res = 0;
+        while(low <= high) {
+            int mid = (low+high)/2;
+            if(isPossible(mid,h,piles)) {
+                res = mid;
+                high = mid-1;
+            }else {
+                low = mid+1;
+            }
+        }
+        return res;
+    }
+
+    public boolean isPossible(int num, int h, int[] arr) {
+        int total = 0;
+        for(int n: arr) {
+            total += Math.ceil((double)n/num);
+        }
+        if(total <= h) {
+            return true;
+        }else {
+            return false;
+        }
+    }
+}
