@@ -6,8 +6,8 @@ public class Practice {
 	
 	public static void main(String[] args) {
 		
-		int n = 3;
-		int m = 3;
+		int n = 3; //no of nodes
+		int m = 3; //no of edges
 		
 		//Adjacency matrix
 		
@@ -58,4 +58,41 @@ public class Practice {
 	
 	
 }
+
+package Arrays;
+
+import java.util.*;
+
+public class Practice {
+	
+	public static void main(String[] args) {
+		
+		int n = 5;
+		int m = 6;
+		
+		int[][] adjm = new int[n+1][n+1];
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i=0;i<m;i++) {
+			System.out.println("Give nodes of edge " + (i+1) + ": ");
+			int x = sc.nextInt();
+			int y = sc.nextInt();
+			adjm[x][y] = 1;
+			adjm[y][x] = 1;
+		}
+		
+		for(int i=0;i<=n;i++) {
+			for(int j=0;j<=n;j++) {
+				System.out.print(adjm[i][j] + " ");
+			}
+			System.out.println();
+		}
+		
+    }
+	
+}
+	
+
+
+
 
